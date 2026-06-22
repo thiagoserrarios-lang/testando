@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #2b1055, #0b0b12 65%);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 24px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    backdrop-filter: blur(12px);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.55);
+}
+
+button {
+    border: none;
+    border-radius: 14px;
+    padding: 13px 18px;
+    margin: 6px 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.createBtn {
+    background: linear-gradient(135deg, #00d084, #00a86b);
+    color: white;
+    width: 100%;
+}
+
+.joinBtn {
+    background: linear-gradient(135deg, #4c8dff, #335cff);
+    color: white;
+    width: 100%;
+}
+
+.startBtn {
+    background: linear-gradient(135deg, #ffb300, #ff6a00);
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.section {
+    margin-top: 18px;
+}
+
+.logo {
+    width: 220px;
+    height: 220
+    object-fit: cover;
+    border-radius: 70%;
+}
+
+#roomInfo {
+    background: rgba(255,255,255,0.1);
+    padding: 12px;
+    border-radius: 14px;
+    color: #ffd86b;
+}
+
+#playerList {
+    list-style: none;
+    margin-top: 12px;
+}
+
+#playerList li {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 7px;
+}
+
+#round {
+    margin-top: 22px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#timer {
+    font-size: 38px;
+    margin-top: 12px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+#selectedNumber {
+    margin-top: 12px;
+    color: #00ff99;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.numberGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.numberBtn {
+    height: 62px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 24px;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.numberBtn:hover {
+    background: #6c4cff;
+}
+
+#results {
+    margin-top: 22px;
+    text-align: left;
+}
+
+#results h2,
+#results h3 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#results p {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin: 18px 0;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .numberGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .numberBtn {
+        height: 58px;
+    }
+}

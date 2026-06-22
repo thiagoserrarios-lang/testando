@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BattlePix</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <img
+        src="assets/images/logo.png"
+        alt="Ícone de Batalha"
+        class="logo">
+
+    <h1>BattlePix</h1>
+
+        <div id="authArea">
+
+    <h2>Login / Cadastro</h2>
+
+    <input id="username" placeholder="Usuário">
+
+    <input id="password" type="password" placeholder="Senha">
+
+    <button onclick="registerUser()">Cadastrar</button>
+
+    <button onclick="loginUser()">Entrar</button>
+
+</div>
+
+<div id="userArea" style="display:none;">
+
+    <h2 id="loggedUser"></h2>
+
+    <button onclick="logoutUser()">Sair</button>
+
+</div>
+
+    <input
+    id="roomCode"
+    type="text"
+    placeholder="Código da Sala">
+
+<button
+    id="joinRoomBtn"
+    class="joinBtn"
+    onclick="joinRoom()">
+    Entrar na Sala
+</button>
+
+<button
+    id="createRoomBtn"
+    class="createBtn"
+    onclick="createRoom()">
+    Criar Sala
+</button>
+
+<button
+    id="leaveRoomBtn"
+    class="leaveBtn"
+    onclick="leaveRoom()"
+    style="display:none;">
+    Sair da Sala
+</button>
+
+    <hr style="margin:20px 0;">
+
+    <div class="section">
+
+        <h2 id="roomInfo">
+            Nenhuma sala
+        </h2>
+
+    </div>
+
+    <div class="section">
+
+        <h2>Jogadores</h2>
+
+        <ul id="playerList"></ul>
+
+    </div>
+
+    <div class="section">
+
+        <button
+            class="startBtn"
+            onclick="startGame()">
+            Iniciar Partida
+        </button>
+
+    </div>
+
+    <div id="round">
+        Rodada 0
+    </div>
+
+    <div id="timer">
+        Tempo: 15
+    </div>
+
+    <div id="selectedNumber"></div>
+
+    <div class="numberGrid">
+
+        <button class="numberBtn" onclick="chooseNumber(0)">0</button>
+        <button class="numberBtn" onclick="chooseNumber(1)">1</button>
+        <button class="numberBtn" onclick="chooseNumber(2)">2</button>
+        <button class="numberBtn" onclick="chooseNumber(3)">3</button>
+
+        <button class="numberBtn" onclick="chooseNumber(4)">4</button>
+        <button class="numberBtn" onclick="chooseNumber(5)">5</button>
+        <button class="numberBtn" onclick="chooseNumber(6)">6</button>
+        <button class="numberBtn" onclick="chooseNumber(7)">7</button>
+
+        <button class="numberBtn" onclick="chooseNumber(8)">8</button>
+        <button class="numberBtn" onclick="chooseNumber(9)">9</button>
+        <button class="numberBtn" onclick="chooseNumber(10)">10</button>
+
+    </div>
+
+    <div id="results"></div>
+
+</div>
+
+<audio id="tickSound" src="assets/sounds/tick.mp3" preload="auto"></audio>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+
+</body>
+</html>
